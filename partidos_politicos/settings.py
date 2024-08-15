@@ -11,6 +11,12 @@ https://docs.djangoproject.com/en/5.0/ref/settings/
 """
 
 from pathlib import Path
+#configuraciones de la base de datos  PostgreSQL:
+import dj_database_url
+
+DATABASES = {
+    'default': dj_database_url.config(conn_max_age=600)
+}
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -25,7 +31,7 @@ SECRET_KEY = 'django-insecure-g1cur7yx4j_tn4!0-t!0ak#l2*-ck*py%j#$vv&xv4g0($zz+t
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
