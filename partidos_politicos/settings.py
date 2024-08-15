@@ -43,7 +43,10 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'partidos'
+    'partidos',
+    'corsheaders',
+    
+    
 ]
 
 MIDDLEWARE = [
@@ -54,7 +57,16 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'corsheaders.middleware.CorsMiddleware',
 ]
+CORS_ALLOW_ALL_ORIGINS = True
+
+CORS_ALLOWED_ORIGINS = [
+    "http://localhost:8000",
+    "https://deivilachapel.pythonanywhere.com/api/partidos/",
+    "https://web-production-8f14f.up.railway.app/api/partidos/",
+]
+
 
 ROOT_URLCONF = 'partidos_politicos.urls'
 
