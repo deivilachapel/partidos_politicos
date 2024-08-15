@@ -1,0 +1,12 @@
+Pagina Web
+
+https://uasdmonografico56.wixsite.com/partidos
+
+Servidor deploy Railway
+
+https://web-production-8f14f.up.railway.app/api/partidos/
+
+
+Servidor deploy Pytohn Any Where
+
+https://deivilachapel.pythonanywhere.com/api/partidos/
